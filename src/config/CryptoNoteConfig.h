@@ -26,9 +26,9 @@ namespace CryptoNote
 
         const size_t CRYPTONOTE_MAX_TX_SIZE = 1000000000;
 
-        const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 3914525;
+        const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x171f54;
 
-        const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW = 40;
+        const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW = 60;
 
         const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT = 60 * 60 * 2;
 
@@ -344,9 +344,7 @@ namespace CryptoNote
         {0xb5, 0x0c, 0x4a, 0x6c, 0xcf, 0x52, 0x57, 0x41, 0x65, 0xf9, 0x91, 0xa4, 0xb6, 0xc1, 0x43, 0xe9}};
 
     const char *const SEED_NODES[] = {
-        "206.189.142.142:11897", // rock
-        "145.239.88.119:11999", // cision
-        "142.44.242.106:11897", // tom
-        "165.227.252.132:11897" // iburnmycd
+        "185.181.8.249:19897", // Ubuntu-1
+        "185.227.110.80:19898", // Ubuntu-2
     };
 } // namespace CryptoNote
