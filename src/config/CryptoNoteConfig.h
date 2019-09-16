@@ -348,7 +348,7 @@ namespace CryptoNote
         {0xb5, 0x0c, 0x4a, 0x6c, 0xcf, 0x52, 0x87, 0x61, 0x25, 0xf9, 0x11, 0xa4, 0xb0, 0xc1, 0x43, 0xe9}};
 
     const char *const SEED_NODES[] = {
-        "185.247.117.2:19897", // Netherland-CREAT-Node
+        "103.125.216.135:19897", // Japan-CREAT-Node
         "103.102.47.100:19897", // Singapore-CREAT-Node
     };
 } // namespace CryptoNote
