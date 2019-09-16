@@ -117,7 +117,7 @@ namespace CryptoNote
 
         const uint64_t DEFAULT_MIXIN_V2 = MAXIMUM_MIXIN_V2;
 
-        const uint64_t DEFAULT_MIXIN_V3 = MAXIMUM_MIXIN_V;
+        const uint64_t DEFAULT_MIXIN_V3 = MAXIMUM_MIXIN_V3;
 
         const uint64_t DEFAULT_DUST_THRESHOLD = UINT64_C(0);//set how much of decimal can be send by wallet, 0 maen all wallet can be sent
 
