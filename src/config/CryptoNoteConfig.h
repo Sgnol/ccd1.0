@@ -19,7 +19,7 @@ namespace CryptoNote
 {
     namespace parameters
     {
-        const uint64_t DIFFICULTY_TARGET = 240; // seconds needed between each blocks
+        const uint64_t DIFFICULTY_TARGET = 90; // seconds needed between each blocks
 
         const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER = 500000000;
 
@@ -27,7 +27,7 @@ namespace CryptoNote
 
         const size_t CRYPTONOTE_MAX_TX_SIZE = 1000000000;
 
-        const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 30292; //get this from 
+        const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 1532222; //get this from https://www.rapidtables.com/convert/number/hex-to-decimal.html
         
         const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW = 4; //number of block needed minimally for confirmation
 
@@ -42,9 +42,9 @@ namespace CryptoNote
         const size_t BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V3 = 11;
 
         // MONEY_SUPPLY - total number coins to be generated
-        const uint64_t MONEY_SUPPLY = UINT64_C(740000000000000000);
+        const uint64_t MONEY_SUPPLY = UINT64_C(7400000000000000);
 
-        const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX = 1;
+        const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX = 0;
 
         const size_t ZAWY_DIFFICULTY_V2 = 1;
 
@@ -54,7 +54,7 @@ namespace CryptoNote
 
         const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2 = 3;
 
-        const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3 = 800000;
+        const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3 = 4;
 
         const unsigned EMISSION_SPEED_FACTOR = 20;
 
@@ -98,16 +98,16 @@ namespace CryptoNote
 
         const uint64_t MAXIMUM_MIXIN_V2 = 7;
 
-        const uint64_t MINIMUM_MIXIN_V3 = 7;
+        const uint64_t MINIMUM_MIXIN_V3 = 8;
 
-        const uint64_t MAXIMUM_MIXIN_V3 = 7;
+        const uint64_t MAXIMUM_MIXIN_V3 = 8;
 
         /* The heights to activate the mixin limits at */
-        const uint32_t MIXIN_LIMITS_V1_HEIGHT = 1;
+        const uint32_t MIXIN_LIMITS_V1_HEIGHT = 0;
 
         const uint32_t MIXIN_LIMITS_V2_HEIGHT = 1;
 
-        const uint32_t MIXIN_LIMITS_V3_HEIGHT = 0;
+        const uint32_t MIXIN_LIMITS_V3_HEIGHT = 2;
 
         /* The mixin to use by default with zedwallet and turtle-service */
         /* DEFAULT_MIXIN_V0 is the mixin used before MIXIN_LIMITS_V1_HEIGHT is started */
@@ -119,7 +119,7 @@ namespace CryptoNote
 
         const uint64_t DEFAULT_MIXIN_V3 = MAXIMUM_MIXIN_V3;
 
-        const uint64_t DEFAULT_DUST_THRESHOLD = UINT64_C(0);//set how much of decimal can be send by wallet, 0 maen all wallet can be sent
+        const uint64_t DEFAULT_DUST_THRESHOLD = UINT64_C(0);//set how much of decimal can be send by wallet, 0 mean all wallet can be sent
 
         const uint64_t DEFAULT_DUST_THRESHOLD_V2 = UINT64_C(0);
 
@@ -196,7 +196,7 @@ namespace CryptoNote
 
         const uint32_t UPGRADE_HEIGHT_V3 = 2;
 
-        const uint32_t UPGRADE_HEIGHT_V4 = 1; // Upgrade height for CN-Lite Variant 1 switch.
+        const uint32_t UPGRADE_HEIGHT_V4 = 350000; // Upgrade height for CN-Lite Variant 1 switch.
 
         const uint32_t UPGRADE_HEIGHT_V5 = 1200000; // Upgrade height for CN-Turtle Variant 2 switch.
 
@@ -212,6 +212,11 @@ namespace CryptoNote
 
         /* Block heights we are going to have hard forks at */
         const uint64_t FORK_HEIGHTS[] = {
+            500,
+            750,
+            1000,
+            7500,
+            15000,
             37000, //3 Months
             64800, //180 Days
             129600,  //365 Days  
@@ -253,7 +258,7 @@ namespace CryptoNote
             FORK_HEIGHTS_SIZE == 0 || CURRENT_FORK_INDEX < FORK_HEIGHTS_SIZE,
             "CURRENT_FORK_INDEX out of range of FORK_HEIGHTS!");
 
-        const char CRYPTONOTE_BLOCKS_FILENAME[] = "CREATblocks.bin";
+        const char CRYPTONOTE_BLOCKS_FILENAME[] = "blocks.bin";
 
         const char CRYPTONOTE_BLOCKINDEXES_FILENAME[] = "blockindexes.bin";
 
@@ -264,7 +269,7 @@ namespace CryptoNote
         const char MINER_CONFIG_FILE_NAME[] = "miner_conf.json";
     } // namespace parameters
 
-    const char CRYPTONOTE_NAME[] = "CREATcoin";
+    const char CRYPTONOTE_NAME[] = "CreatCoin";
 
     const uint8_t TRANSACTION_VERSION_1 = 1;
 
@@ -340,12 +345,12 @@ namespace CryptoNote
     const uint32_t DATABASE_DEFAULT_MAX_OPEN_FILES = 125; // 125 files
     const uint16_t DATABASE_DEFAULT_BACKGROUND_THREADS_COUNT = 4; // 4 DB threads
 
-    const char LATEST_VERSION_URL[] = "http://latest.turtlecoin.lol";
+    const char LATEST_VERSION_URL[] = "http://www.yucreat.org";
 
     const std::string LICENSE_URL = "https://github.com/turtlecoin/turtlecoin/blob/master/LICENSE";
 
     const static boost::uuids::uuid CRYPTONOTE_NETWORK = {
-        {0xb5, 0x0c, 0x4a, 0x6c, 0xcf, 0x52, 0x87, 0x61, 0x25, 0xf9, 0x11, 0xa4, 0xb0, 0xc1, 0x43, 0xe9}};
+        {0xb5, 0x0c, 0x4a, 0x6c, 0xcf, 0x52, 0x87, 0x61, 0x25, 0xf1, 0x19, 0xa6, 0xb6, 0xc8, 0x66, 0xe9}};
 
     const char *const SEED_NODES[] = {
         "103.125.216.135:19897", // Japan-CREAT-Node
