@@ -27,7 +27,7 @@ namespace CryptoNote
 
         const size_t CRYPTONOTE_MAX_TX_SIZE = 1000000000;
 
-        const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 1532222; //get this from https://www.rapidtables.com/convert/number/hex-to-decimal.html
+        const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 6147300286; //get this from https://www.rapidtables.com/convert/number/hex-to-decimal.html
         
         const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW = 4; //number of block needed minimally for confirmation
 
