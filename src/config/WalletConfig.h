@@ -1,4 +1,5 @@
 // Copyright (c) 2018, The TurtleCoin Developers
+// Copyright (c) 2018, The Yucreat Foundation
 //
 // Please see the included LICENSE file for more information.
 
@@ -23,7 +24,7 @@ namespace WalletConfig
     const std::string addressBookFilename = ".addressBook.json";
 
     /* The name of your deamon */
-    const std::string daemonName = "CreatCoind";
+    const std::string daemonName = "CREATCoind";
 
     /* The name to call this wallet */
     const std::string walletName = "CREATwallet";
