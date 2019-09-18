@@ -62,7 +62,7 @@ namespace CryptoNote
 
         const char GENESIS_COINBASE_TX_HEX[] =
             "010a01ff000188f3b501029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd088071210142694232c5b04151"
-            "8eba031ca60bf9b9f680309819bddf071e619c53ff71766e48e365812e229452";
+            "d9e4c27d31ec7a68ea568b19488cfcb422659a07a0e44dd5";
 
         static_assert(
             sizeof(GENESIS_COINBASE_TX_HEX) / sizeof(*GENESIS_COINBASE_TX_HEX) != 1,
