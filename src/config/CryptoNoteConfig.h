@@ -61,7 +61,9 @@ namespace CryptoNote
         static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
         const char GENESIS_COINBASE_TX_HEX[] =
-            "010a01ff000188f3b501029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd088071210142694232c5b04151"
+            "00f0eb9fefdabd150000210163d616479f221eab662adf5c37b8e9e616e8423094d29b9286fccca448ac5893"
+            //"010a01ff000188f3b501029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd088071210142694232c5b04151" //106
+            // 00f0ebd7edf7c415000021014ecdadbcea0aac3386caca7547fac57d778f0307272cad6e2e27756720cebf2f //88
             "d9e4c27d31ec7a68ea568b19488cfcb422659a07a0e44dd5";
 
         static_assert(
