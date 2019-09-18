@@ -346,13 +346,13 @@ namespace CryptoNote
 
     const char LATEST_VERSION_URL[] = "http://www.yucreat.org";
 
-    const std::string LICENSE_URL = "https://github.com/turtlecoin/turtlecoin/blob/master/LICENSE";
+    const std::string LICENSE_URL = "https://github.org/Yucreators/CreatCoin/blob/master/LICENSE";
 
     const static boost::uuids::uuid CRYPTONOTE_NETWORK = {
         {0xb5, 0x0c, 0x4a, 0x6c, 0xcf, 0x52, 0x87, 0x61, 0x25, 0xf1, 0x19, 0xa6, 0xb6, 0xc8, 0x66, 0xe9}};
 
     const char *const SEED_NODES[] = {
-        "103.125.216.135:19897", // Japan-CREAT-Node
-        "103.102.47.100:19897", // Singapore-CREAT-Node
+        "202.182.111.223:19897", // Japan-CreatCoin-Node
+        "207.148.74.15:19897", // Singapore-CreatCoin-Node
     };
 } // namespace CryptoNote
