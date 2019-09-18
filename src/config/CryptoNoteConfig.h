@@ -64,7 +64,7 @@ namespace CryptoNote
             "010401ff0001b5d890a51a028d6f91e9e1d4709c30eb1204769b5d74b01244ee5cc58921272637bae98ab23b210162061590131f641963c110516b77a52755f479b47e92de6d000579a1485ca54d"
             //"010a01ff000188f3b501029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd088071210142694232c5b04151" //106
             // 00f0ebd7edf7c415000021014ecdadbcea0aac3386caca7547fac57d778f0307272cad6e2e27756720cebf2f //88
-            "d9e4c27d31ec7a68ea568b19488cfcb422659a07a0e44dd5";
+            "8eba031ca60bf9b9f680309819bddf071e619c53ff71766e48e365812e229452";
 
         static_assert(
             sizeof(GENESIS_COINBASE_TX_HEX) / sizeof(*GENESIS_COINBASE_TX_HEX) != 1,
@@ -355,7 +355,9 @@ namespace CryptoNote
         {0xb5, 0x0c, 0x4a, 0x6c, 0xcf, 0x52, 0x87, 0x61, 0x25, 0xf1, 0x19, 0xa6, 0xb6, 0xc8, 0x66, 0xe9}};
 
     const char *const SEED_NODES[] = {
-        "202.182.111.223:19897", // Japan-CreatCoin-Node
-        "207.148.74.15:19897", // Singapore-CreatCoin-Node
+        "185.227.110.116:19897",// CreatCoin-Netherland-Node1
+        "103.125.217.91:19897", // CreatCoin-Singapore-Node2
+        "149.28.175.128:19897", // CreatCoin-Sidney-Node3
+        "155.138.134.217:19897", // CreatCoin-Canada-Node4
     };
 } // namespace CryptoNote
