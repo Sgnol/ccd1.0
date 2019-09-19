@@ -210,16 +210,34 @@ namespace CryptoNote
         static_assert(0 < UPGRADE_VOTING_THRESHOLD && UPGRADE_VOTING_THRESHOLD <= 100, "Bad UPGRADE_VOTING_THRESHOLD");
         static_assert(UPGRADE_VOTING_WINDOW > 1, "Bad UPGRADE_VOTING_WINDOW");
 
-        /* Block heights we are going to have hard forks at */
+              /* Block heights we are going to have hard forks at */
         const uint64_t FORK_HEIGHTS[] = {
-            15000, // 45 Days
-            37000, // 90 Days
-            64800, // 180 Days
-            129600,// 365 Days  
-            187000,// 1.5 Year
-            350000,// 2 Year
-            425000,// 2.5 Year
-            600000,// 3.25 Years
+            500,
+            750,
+            1000,
+            7500,
+            15000,
+            37000, //3 Months
+            64800, //180 Days
+            129600,  //365 Days  
+            187000, // 0
+            350000, // 1
+            440000, // 2
+            620000, // 3
+            700000, // 4
+            800000, // 5
+            1000000, // 6
+            1200000, // 7
+            1300000, // 8
+            1400000, // 9
+            1600000, // 10
+            1800000, // 11
+            2000000, // 12
+            2200000, // 13
+            2400000, // 14
+            2600000, // 15
+            2800000, // 16
+            3000000, // 17
         };
 
         /* MAKE SURE TO UPDATE THIS VALUE WITH EVERY MAJOR RELEASE BEFORE A FORK */
