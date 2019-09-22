@@ -14,24 +14,24 @@ namespace WalletConfig
     const std::string_view addressPrefix = "YuC";
 
     /* Your coins 'Ticker', e.g. Monero = XMR, Bitcoin = BTC */
-    const std::string ticker = "CREAT";
+    const std::string ticker = "YUC";
 
     /* The filename to output the CSV to in save_csv */
-    const std::string csvFilename = "Creat_tr.csv";
+    const std::string csvFilename = "YUC_tr.csv";
 
     /* The filename to read+write the address book to - consider starting with
        a leading '.' to make it hidden under mac+linux */
     const std::string addressBookFilename = ".addressBook.json";
 
     /* The name of your deamon */
-    const std::string daemonName = "CCd";
+    const std::string daemonName = "yucd";
 
     /* The name to call this wallet */
-    const std::string walletName = "creatwallet";
+    const std::string walletName = "yucwallet";
 
     /* The name of service/walletd, the programmatic rpc interface to a
        wallet */
-    const std::string walletdName = "CC-service";
+    const std::string walletdName = "yuc-service";
 
     /* The full name of your crypto */
     const std::string coinName = std::string(CryptoNote::CRYPTONOTE_NAME);
