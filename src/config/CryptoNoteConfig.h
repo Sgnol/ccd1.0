@@ -19,7 +19,7 @@ namespace CryptoNote
 {
     namespace parameters
     {
-        const uint64_t DIFFICULTY_TARGET = 120; // seconds needed between each blocks
+        const uint64_t DIFFICULTY_TARGET = 90; // seconds needed between each blocks
 
         const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER = 500000000;
 
@@ -27,9 +27,9 @@ namespace CryptoNote
 
         const size_t CRYPTONOTE_MAX_TX_SIZE = 1000000000;
 
-        const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 6147300286; //get this from https://www.rapidtables.com/convert/number/hex-to-decimal.html
+        const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 1874878; //get this from https://www.rapidtables.com/convert/number/hex-to-decimal.html
         
-        const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW = 4; //number of block needed minimally for confirmation
+        const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW = 5; //number of block needed minimally for confirmation
 
         const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT = 60 * 60 * 2;
 
@@ -42,19 +42,19 @@ namespace CryptoNote
         const size_t BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V3 = 11;
 
         // MONEY_SUPPLY - total number coins to be generated
-        const uint64_t MONEY_SUPPLY = UINT64_C(7400000000000000);
+        const uint64_t MONEY_SUPPLY = UINT64_C(740000000000);
 
-        const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX = 0;
+        const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX = 100000;
 
-        const size_t ZAWY_DIFFICULTY_V2 = 1;
+        const size_t ZAWY_DIFFICULTY_V2 = 0;
 
         const uint8_t ZAWY_DIFFICULTY_DIFFICULTY_BLOCK_VERSION = 3;
 
-        const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX = 2;
+        const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX = 310000;
 
-        const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2 = 3;
+        const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2 = 350000;
 
-        const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3 = 4;
+        const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3 = 400000;
 
         const unsigned EMISSION_SPEED_FACTOR = 20;
 
@@ -73,7 +73,7 @@ namespace CryptoNote
            to import from when the block height cannot be found in the node or the node is offline. */
         const uint64_t GENESIS_BLOCK_TIMESTAMP = 1512800692;
 
-        const size_t CRYPTONOTE_REWARD_BLOCKS_WINDOW = 100;
+        const size_t CRYPTONOTE_REWARD_BLOCKS_WINDOW = 50;
 
         const size_t CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE =
             100000; // size of block (bytes) after which reward for block calculated using block size
@@ -85,9 +85,9 @@ namespace CryptoNote
 
         const size_t CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE = 600;
 
-        const size_t CRYPTONOTE_DISPLAY_DECIMAL_POINT = 6;
+        const size_t CRYPTONOTE_DISPLAY_DECIMAL_POINT = 2;
 
-        const uint64_t MINIMUM_FEE = UINT64_C(500);
+        const uint64_t MINIMUM_FEE = UINT64_C(3);
 
         /* This section defines our minimum and maximum mixin counts required for transactions */
         const uint64_t MINIMUM_MIXIN_V1 = 0;
@@ -98,16 +98,16 @@ namespace CryptoNote
 
         const uint64_t MAXIMUM_MIXIN_V2 = 7;
 
-        const uint64_t MINIMUM_MIXIN_V3 = 8;
+        const uint64_t MINIMUM_MIXIN_V3 = 3;
 
-        const uint64_t MAXIMUM_MIXIN_V3 = 8;
+        const uint64_t MAXIMUM_MIXIN_V3 = 3;
 
         /* The heights to activate the mixin limits at */
-        const uint32_t MIXIN_LIMITS_V1_HEIGHT = 0;
+        const uint32_t MIXIN_LIMITS_V1_HEIGHT = 220000;
 
-        const uint32_t MIXIN_LIMITS_V2_HEIGHT = 1;
+        const uint32_t MIXIN_LIMITS_V2_HEIGHT = 310000;
 
-        const uint32_t MIXIN_LIMITS_V3_HEIGHT = 2;
+        const uint32_t MIXIN_LIMITS_V3_HEIGHT = 400000;
 
         /* The mixin to use by default with zedwallet and turtle-service */
         /* DEFAULT_MIXIN_V0 is the mixin used before MIXIN_LIMITS_V1_HEIGHT is started */
@@ -196,11 +196,11 @@ namespace CryptoNote
 
         const uint32_t UPGRADE_HEIGHT_V3 = 2;
 
-        const uint32_t UPGRADE_HEIGHT_V4 = 350000; // Upgrade height for CN-Lite Variant 1 switch.
+        const uint32_t UPGRADE_HEIGHT_V4 = 175000; // Upgrade height for CN-Lite Variant 1 switch.
 
-        const uint32_t UPGRADE_HEIGHT_V5 = 1200000; // Upgrade height for CN-Turtle Variant 2 switch.
+        const uint32_t UPGRADE_HEIGHT_V5 = 600000; // Upgrade height for CN-Turtle Variant 2 switch.
 
-        const uint32_t UPGRADE_HEIGHT_V6 = 1800000; // Upgrade height for Chukwa switch.
+        const uint32_t UPGRADE_HEIGHT_V6 = 800000; // Upgrade height for Chukwa switch.
 
         const uint32_t UPGRADE_HEIGHT_CURRENT = UPGRADE_HEIGHT_V6;
 
@@ -212,9 +212,6 @@ namespace CryptoNote
 
         /* Block heights we are going to have hard forks at */
         const uint64_t FORK_HEIGHTS[] = {
-            500,
-            750,
-            1000,
             7500,
             15000,
             37000, //3 Months
@@ -353,8 +350,6 @@ namespace CryptoNote
 
     const char *const SEED_NODES[] = {
         "185.227.110.116:19897",// CreatCoin-Netherland-Node1
-        "103.125.217.91:19897", // CreatCoin-Singapore-Node2
-        "149.28.175.128:19897", // CreatCoin-Sidney-Node3
-        "155.138.134.217:19897", // CreatCoin-Canada-Node4
+        "103.125.217.91:19897", // CreatCoin-Canada-Node2
     };
 } // namespace CryptoNote
