@@ -19,7 +19,7 @@ namespace CryptoNote
 {
     namespace parameters
     {
-        const uint64_t DIFFICULTY_TARGET = 100; // seconds needed between each blocks
+        const uint64_t DIFFICULTY_TARGET = 90; // seconds needed between each blocks
 
         const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER = 500000000;
 
@@ -42,7 +42,7 @@ namespace CryptoNote
         const size_t BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V3 = 11;
 
         // MONEY_SUPPLY - total number coins to be generated
-        const uint64_t MONEY_SUPPLY = UINT64_C(100000000000);
+        const uint64_t MONEY_SUPPLY = UINT64_C(100000000000000);
 
         const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX = 100000;
 
@@ -50,13 +50,13 @@ namespace CryptoNote
 
         const uint8_t ZAWY_DIFFICULTY_DIFFICULTY_BLOCK_VERSION = 3;
 
-        const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX = 310000;
+        const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX = 620000;
 
-        const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2 = 350000;
+        const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2 = 700000;
 
-        const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3 = 400000;
+        const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3 = 800000;
 
-        const unsigned EMISSION_SPEED_FACTOR = 20;
+        const unsigned EMISSION_SPEED_FACTOR = 21;
 
         static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
@@ -73,7 +73,7 @@ namespace CryptoNote
            to import from when the block height cannot be found in the node or the node is offline. */
         const uint64_t GENESIS_BLOCK_TIMESTAMP = 1512800692;
 
-        const size_t CRYPTONOTE_REWARD_BLOCKS_WINDOW = 50;
+        const size_t CRYPTONOTE_REWARD_BLOCKS_WINDOW = 100;
 
         const size_t CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE =
             100000; // size of block (bytes) after which reward for block calculated using block size
@@ -85,9 +85,9 @@ namespace CryptoNote
 
         const size_t CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE = 600;
 
-        const size_t CRYPTONOTE_DISPLAY_DECIMAL_POINT = 2;
+        const size_t CRYPTONOTE_DISPLAY_DECIMAL_POINT = 4;
 
-        const uint64_t MINIMUM_FEE = UINT64_C(350);
+        const uint64_t MINIMUM_FEE = UINT64_C(10);
 
         /* This section defines our minimum and maximum mixin counts required for transactions */
         const uint64_t MINIMUM_MIXIN_V1 = 0;
@@ -103,11 +103,11 @@ namespace CryptoNote
         const uint64_t MAXIMUM_MIXIN_V3 = 3;
 
         /* The heights to activate the mixin limits at */
-        const uint32_t MIXIN_LIMITS_V1_HEIGHT = 220000;
+        const uint32_t MIXIN_LIMITS_V1_HEIGHT = 440000;
 
-        const uint32_t MIXIN_LIMITS_V2_HEIGHT = 310000;
+        const uint32_t MIXIN_LIMITS_V2_HEIGHT = 620000;
 
-        const uint32_t MIXIN_LIMITS_V3_HEIGHT = 400000;
+        const uint32_t MIXIN_LIMITS_V3_HEIGHT = 800000;
 
         /* The mixin to use by default with zedwallet and turtle-service */
         /* DEFAULT_MIXIN_V0 is the mixin used before MIXIN_LIMITS_V1_HEIGHT is started */
@@ -129,7 +129,7 @@ namespace CryptoNote
 
         const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY = 24 * 60 * 60 / DIFFICULTY_TARGET;
 
-        const size_t DIFFICULTY_WINDOW = 17;
+        const size_t DIFFICULTY_WINDOW = 10;
 
         const size_t DIFFICULTY_WINDOW_V1 = 2880;
 
@@ -196,11 +196,11 @@ namespace CryptoNote
 
         const uint32_t UPGRADE_HEIGHT_V3 = 2;
 
-        const uint32_t UPGRADE_HEIGHT_V4 = 1; // Upgrade height for CN-Lite Variant 1 switch.
+        const uint32_t UPGRADE_HEIGHT_V4 = 35000; // Upgrade height for CN-Lite Variant 1 switch.
 
-        const uint32_t UPGRADE_HEIGHT_V5 = 200000; // Upgrade height for CN-Turtle Variant 2 switch.
+        const uint32_t UPGRADE_HEIGHT_V5 = 1200000; // Upgrade height for CN-Turtle Variant 2 switch.
 
-        const uint32_t UPGRADE_HEIGHT_V6 = 300000; // Upgrade height for Chukwa switch.
+        const uint32_t UPGRADE_HEIGHT_V6 = 1800000; // Upgrade height for Chukwa switch.
 
         const uint32_t UPGRADE_HEIGHT_CURRENT = UPGRADE_HEIGHT_V6;
 
@@ -298,9 +298,9 @@ namespace CryptoNote
     const uint64_t BLOCKS_SYNCHRONIZING_DEFAULT_COUNT = 100; // by default, blocks count in blocks downloading
     const size_t COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT = 1000;
 
-    const int P2P_DEFAULT_PORT = 19897;
+    const int P2P_DEFAULT_PORT = 11897;
 
-    const int RPC_DEFAULT_PORT = 19801;
+    const int RPC_DEFAULT_PORT = 11898;
 
     const int SERVICE_DEFAULT_PORT = 8070;
 
@@ -351,8 +351,9 @@ namespace CryptoNote
         };
 
     const char *const SEED_NODES[] = {
-        "185.227.110.116:19897",// CreatCoin-Netherland-Node1
-        "103.125.217.91:19897", // CreatCoin-Canada-Node2
-        "185.144.158.244:19897", // CreatCoin-Miami-Node3
+        "185.227.110.116:11897",// CreatCoin-Netherland-Node1
+        "103.125.217.91:11897", // CreatCoin-Canada-Node2
+        "185.144.158.244:11897", // CreatCoin-Miami-Node3
+        "45.32.135.225:11897", // CreatCoin-LA-Node4
     };
 } // namespace CryptoNote
