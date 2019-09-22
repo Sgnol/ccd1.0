@@ -190,11 +190,11 @@ add_dependencies(zedwallet version)
 
 # Finally build the binaries
 set_property(TARGET TurtleCoind PROPERTY OUTPUT_NAME "ccd")
-set_property(TARGET zedwallet PROPERTY OUTPUT_NAME "creatwallet")
-set_property(TARGET zedwallet++ PROPERTY OUTPUT_NAME "creatwallet-beta")
-set_property(TARGET WalletService PROPERTY OUTPUT_NAME "cc-service")
-set_property(TARGET miner PROPERTY OUTPUT_NAME "creat-miner")
-set_property(TARGET cryptotest PROPERTY OUTPUT_NAME "creat-cryptotest")
+set_property(TARGET zedwallet PROPERTY OUTPUT_NAME "ccdwallet")
+set_property(TARGET zedwallet++ PROPERTY OUTPUT_NAME "ccdwallet-beta")
+set_property(TARGET WalletService PROPERTY OUTPUT_NAME "ccd-service")
+set_property(TARGET miner PROPERTY OUTPUT_NAME "ccd-miner")
+set_property(TARGET cryptotest PROPERTY OUTPUT_NAME "cryptotest")
 set_property(TARGET WalletApi PROPERTY OUTPUT_NAME "wallet-api")
 set_property(TARGET WalletUpgrader PROPERTY OUTPUT_NAME "wallet-upgrader")
 
