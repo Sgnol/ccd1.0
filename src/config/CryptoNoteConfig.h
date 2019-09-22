@@ -19,7 +19,7 @@ namespace CryptoNote
 {
     namespace parameters
     {
-        const uint64_t DIFFICULTY_TARGET = 90; // seconds needed between each blocks
+        const uint64_t DIFFICULTY_TARGET = 100; // seconds needed between each blocks
 
         const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER = 500000000;
 
@@ -29,7 +29,7 @@ namespace CryptoNote
 
         const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 1874878; //get this from https://www.rapidtables.com/convert/number/hex-to-decimal.html
         
-        const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW = 5; //number of block needed minimally for confirmation
+        const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW = 3; //number of block needed minimally for confirmation
 
         const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT = 60 * 60 * 2;
 
@@ -42,7 +42,7 @@ namespace CryptoNote
         const size_t BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V3 = 11;
 
         // MONEY_SUPPLY - total number coins to be generated
-        const uint64_t MONEY_SUPPLY = UINT64_C(740000000000);
+        const uint64_t MONEY_SUPPLY = UINT64_C(100000000000);
 
         const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX = 100000;
 
@@ -87,12 +87,12 @@ namespace CryptoNote
 
         const size_t CRYPTONOTE_DISPLAY_DECIMAL_POINT = 2;
 
-        const uint64_t MINIMUM_FEE = UINT64_C(3);
+        const uint64_t MINIMUM_FEE = UINT64_C(350);
 
         /* This section defines our minimum and maximum mixin counts required for transactions */
         const uint64_t MINIMUM_MIXIN_V1 = 0;
 
-        const uint64_t MAXIMUM_MIXIN_V1 = 100;
+        const uint64_t MAXIMUM_MIXIN_V1 = 3;
 
         const uint64_t MINIMUM_MIXIN_V2 = 7;
 
@@ -119,13 +119,13 @@ namespace CryptoNote
 
         const uint64_t DEFAULT_MIXIN_V3 = MAXIMUM_MIXIN_V3;
 
-        const uint64_t DEFAULT_DUST_THRESHOLD = UINT64_C(0);//set how much of decimal can be send by wallet, 0 mean all wallet can be sent
+        const uint64_t DEFAULT_DUST_THRESHOLD = UINT64_C(10);//set how much of decimal can be send by wallet, 0 mean all wallet can be sent
 
         const uint64_t DEFAULT_DUST_THRESHOLD_V2 = UINT64_C(0);
 
         const uint32_t DUST_THRESHOLD_V2_HEIGHT = MIXIN_LIMITS_V2_HEIGHT;
 
-        const uint32_t FUSION_DUST_THRESHOLD_HEIGHT_V2 = 0; //related to how transaction are mixed with other external transaction
+        const uint32_t FUSION_DUST_THRESHOLD_HEIGHT_V2 = 1; //related to how transaction are mixed with other external transaction
 
         const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY = 24 * 60 * 60 / DIFFICULTY_TARGET;
 
@@ -196,11 +196,11 @@ namespace CryptoNote
 
         const uint32_t UPGRADE_HEIGHT_V3 = 2;
 
-        const uint32_t UPGRADE_HEIGHT_V4 = 175000; // Upgrade height for CN-Lite Variant 1 switch.
+        const uint32_t UPGRADE_HEIGHT_V4 = 1; // Upgrade height for CN-Lite Variant 1 switch.
 
-        const uint32_t UPGRADE_HEIGHT_V5 = 600000; // Upgrade height for CN-Turtle Variant 2 switch.
+        const uint32_t UPGRADE_HEIGHT_V5 = 200000; // Upgrade height for CN-Turtle Variant 2 switch.
 
-        const uint32_t UPGRADE_HEIGHT_V6 = 800000; // Upgrade height for Chukwa switch.
+        const uint32_t UPGRADE_HEIGHT_V6 = 300000; // Upgrade height for Chukwa switch.
 
         const uint32_t UPGRADE_HEIGHT_CURRENT = UPGRADE_HEIGHT_V6;
 
@@ -238,7 +238,7 @@ namespace CryptoNote
         };
 
         /* MAKE SURE TO UPDATE THIS VALUE WITH EVERY MAJOR RELEASE BEFORE A FORK */
-        const uint64_t SOFTWARE_SUPPORTED_FORK_INDEX = 15;
+        const uint64_t SOFTWARE_SUPPORTED_FORK_INDEX = 11;
 
         const uint64_t FORK_HEIGHTS_SIZE = sizeof(FORK_HEIGHTS) / sizeof(*FORK_HEIGHTS);
 
@@ -254,11 +254,11 @@ namespace CryptoNote
             FORK_HEIGHTS_SIZE == 0 || CURRENT_FORK_INDEX < FORK_HEIGHTS_SIZE,
             "CURRENT_FORK_INDEX out of range of FORK_HEIGHTS!");
 
-        const char CRYPTONOTE_BLOCKS_FILENAME[] = "blocks.bin";
+        const char CRYPTONOTE_BLOCKS_FILENAME[] = "creat-blocks.bin";
 
-        const char CRYPTONOTE_BLOCKINDEXES_FILENAME[] = "blockindexes.bin";
+        const char CRYPTONOTE_BLOCKINDEXES_FILENAME[] = "creat-blockindexes.bin";
 
-        const char CRYPTONOTE_POOLDATA_FILENAME[] = "poolstate.bin";
+        const char CRYPTONOTE_POOLDATA_FILENAME[] = "creat-poolstate.bin";
 
         const char P2P_NET_DATA_FILENAME[] = "p2pstate.bin";
 
@@ -345,11 +345,14 @@ namespace CryptoNote
 
     const std::string LICENSE_URL = "https://github.org/Yucreators/CreatCoin/blob/master/LICENSE";
 
-    const static boost::uuids::uuid CRYPTONOTE_NETWORK = {
-        {0xb5, 0x0c, 0x4a, 0x6c, 0xcf, 0x52, 0x87, 0x61, 0x25, 0xf1, 0x19, 0xa6, 0xb6, 0xc8, 0x66, 0xe9}};
+    const static boost::uuids::uuid CRYPTONOTE_NETWORK = 
+    {
+        {0xb5, 0x0c, 0x4a, 0x6c, 0xcf, 0x52, 0x87, 0x61, 0x25, 0xf1, 0x19, 0xa6, 0xb6, 0xc8, 0x66, 0xe9}
+        };
 
     const char *const SEED_NODES[] = {
         "185.227.110.116:19897",// CreatCoin-Netherland-Node1
         "103.125.217.91:19897", // CreatCoin-Canada-Node2
+        "185.144.158.244:19897", // CreatCoin-Miami-Node3
     };
 } // namespace CryptoNote
