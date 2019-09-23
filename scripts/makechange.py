@@ -107,10 +107,10 @@ def sendTXs(host, port, rpcPassword, sender, receiver):
             sleepAmount = 0.01
 
 
-walletdHostA = "127.0.0.1"
+walletdHostA = "45.32.135.225"
 walletdPortA = "8070"
 
-walletdHostB = "127.0.0.1"
+walletdHostB = "185.144.158.244"
 walletdPortB = "8071"
 
 rpcPasswordA = "test"
